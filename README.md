@@ -28,7 +28,7 @@
 - [Probar el Servidor MCP](#-probar-el-servidor-mcp)
 - [Probar Tools](#️-probar-tools-con-tool_agentpy)
 - [Chat CLI](#-chat-cli-con-recursos-y-prompts)
-- [Notas de Seguridad](#-notas-de-seguridad)
+- [Certificación](#-certificación)
 - [Próximos Pasos](#-próximos-pasos)
 
 ---
@@ -297,37 +297,26 @@ Utiliza el prompt MCP `format` para producir una versión en Markdown estructura
 
 ---
 
-## 🔐 Notas de seguridad
+## 🎓 Certificación
 
-- ⚠️ **NO subas `.env`** ni ninguna clave real de API
-- 🔒 Si alguna vez se subió `.env`, revoca las claves y elimina el archivo del historial
-- 🛡️ Mantén tu modelo local detrás de `localhost` o una red segura si lo expones
+Este proyecto fue desarrollado como parte del aprendizaje del **Model Context Protocol (MCP)** y el curso de Anthropic.
 
-### .gitignore recomendado
+### Curso completado: Prompt Engineering with Anthropic
 
-```gitignore
-# Entorno virtual
-.venv/
-venv/
+![Certificado del curso de Anthropic](images/certificate-anthropic.pdf)
 
-# Variables de entorno
-.env
+**Curso:** [Prompt Engineering Interactive Tutorial](https://anthropic.skilljar.com/)
 
-# Python
-__pycache__/
-*.pyc
-*.pyo
+El curso cubre:
+- 🤖 Fundamentos del Model Context Protocol (MCP)
+- 🛠️ Implementación de tools, resources y prompts
+- 📚 Mejores prácticas de prompt engineering
+- 🔄 Integración con modelos de IA (Claude y compatibles)
 
-# Lockfiles
-uv.lock
-poetry.lock
-
-# IDE
-.vscode/
-.idea/
-```
+Este proyecto aplica los conceptos aprendidos adaptando el flujo MCP para funcionar con **modelos locales** en lugar de la API de Claude, demostrando la flexibilidad y portabilidad del protocolo.
 
 ---
+
 
 ## 🧩 Próximos pasos
 
