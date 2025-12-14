@@ -1,0 +1,14 @@
+[project]
+name = "app"
+version = "0.1.0"
+description = "MCP Chat usando un modelo local expuesto por LM Studio"
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "anthropic>=0.51.0",         # Solo se usa para tipos; ya no llamamos a la API
+    "mcp[cli]>=1.8.0",
+    "prompt-toolkit>=3.0.51",
+    "python-dotenv>=1.1.0",
+    "requests>=2.31.0",          # Para llamar al endpoint HTTP de LM Studio
+]
