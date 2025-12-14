@@ -35,7 +35,7 @@
 
 ## 🎥 Demo en video
 
-![Demo MCP Local LLM CLI](docs/images/demo.gif)
+![Demo MCP Local LLM CLI](images/demo.gif)
 
 Demo de cliente y servidor MCP que usan un **modelo local** (LM Studio / OpenAI compatible) en lugar de Claude.
 
@@ -93,7 +93,6 @@ Diccionario en memoria `docs` con documentos de ejemplo:
 - `summarize(doc_id)` → genera un resumen conciso
 - `format(doc_id)` → formatea el documento como un informe estructurado en Markdown
 
-![Arquitectura del servidor MCP](docs/images/arquitectura-servidor.png)
 
 #### 📡 Cliente MCP (`mcp_client.py`)
 
@@ -107,7 +106,6 @@ Envuelve `ClientSession` del SDK MCP.
 - `list_prompts()`
 - `get_prompt(prompt_name, args)`
 
-![Cliente MCP en acción](docs/images/cliente-mcp.png)
 
 #### 🤖 Integración con el modelo local (`core/claude.py`)
 
@@ -123,7 +121,6 @@ Usa un modelo configurado por entorno, por ejemplo:
 LOCAL_LLM_MODEL=qwen/qwen3-8b
 ```
 
-![Configuración del modelo local](docs/images/modelo-local.png)
 
 #### 💻 Interfaces de uso
 
@@ -151,18 +148,7 @@ cli_project/
 ├── uv.lock              # Lockfile de dependencias (opcional)
 ├── .env                 # Variables de entorno (NO se sube a GitHub)
 ├── .gitignore           # Archivos ignorados por git (.env, .venv, etc.)
-└── docs/
-    └── images/
-        ├── demo.gif
-        ├── arquitectura-servidor.png
-        ├── cliente-mcp.png
-        ├── modelo-local.png
-        ├── entorno-virtual.png
-        ├── lm-studio.png
-        ├── mcp-inspector.png
-        ├── tool-agent-read-doc.png
-        ├── chat-report.png
-        └── format-plan.png
+
 ```
 
 ---
@@ -197,7 +183,6 @@ uv pip install -e .
 
 > Si prefieres, puedes usar `python -m venv .venv` y `pip install -r ...`
 
-![Creación del entorno virtual](docs/images/entorno-virtual.png)
 
 ### 3. Configurar variables de entorno
 
@@ -223,7 +208,7 @@ LOCAL_LLM_API_KEY="not-needed"
 
 4. **Opcional:** prueba con `curl` o una petición mínima para confirmar que responde
 
-![LM Studio configurado y corriendo](docs/images/lm-studio.png)
+![LM Studio configurado y corriendo](images/lmstudio.png)
 
 ---
 
@@ -243,7 +228,7 @@ Abre la URL que te indique (ej. `http://127.0.0.1:6274`).
 - **Resources:** `docs://documents`, `docs://documents/{doc_id}`
 - **Prompts:** `rewrite_markdown`, `summarize`, `format`
 
-![MCP Inspector mostrando tools y resources](docs/images/mcp-inspector.png)
+![MCP Inspector mostrando tools y resources](images/inspector.png)
 
 ---
 
@@ -268,7 +253,7 @@ uv run tool_agent.py
 3. El agente ejecuta la tool en el servidor MCP
 4. Devuelve la respuesta final combinando tool + modelo
 
-![Tool agent leyendo documento](docs/images/tool-agent-read-doc.png)
+![Tool agent leyendo documento](images/agent.png)
 
 ---
 
@@ -292,7 +277,6 @@ El cliente:
 2. inyecta el contenido en el contexto
 3. y el modelo responde explicando el documento
 
-![Chat CLI usando @report.pdf](docs/images/chat-report.png)
 
 #### 📝 Formateo con prompts (`/format`)
 
@@ -302,7 +286,7 @@ El cliente:
 
 Utiliza el prompt MCP `format` para producir una versión en Markdown estructurado del documento `plan.md`.
 
-![Prompt /format aplicado a plan.md](docs/images/format-plan.png)
+![Prompt /format aplicado a plan.md](images/prompt.png)
 
 #### 🔍 Otros prompts (si los defines)
 
